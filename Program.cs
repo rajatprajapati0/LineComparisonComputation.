@@ -25,14 +25,19 @@ namespace LineComparisonComputation1
             }
             Console.WriteLine($"length of first  :{firstLine}");
             Console.WriteLine($"length of second :{secondLine}");
-            bool check = firstLine.Equals(secondLine);
-            if (check == true)
+            int check = firstLine.CompareTo(secondLine);
+
+            if (check == 1)
             {
-                Console.WriteLine("lines are equal");
+                Console.WriteLine("first line is greater than second");
             }
-            else
+            else if(check == -1)
             {
-                Console.WriteLine("lines are not equal");
+                Console.WriteLine("second line is greater than first ");
+            }
+            else 
+            {
+                Console.WriteLine("Both lines are equal");
             }
             Console.ReadLine();
         }
